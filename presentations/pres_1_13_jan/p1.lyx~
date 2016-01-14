@@ -618,8 +618,24 @@ Artificial Immune System
 Modeling Problems
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Section
+Artificial Immune System
+\end_layout
+
+\begin_layout BeginFrame
+Potential Problems
+\end_layout
+
+\begin_layout Itemize
+Disease detection
 \end_layout
 
 \begin_layout EndFrame
