@@ -732,7 +732,7 @@ Possible Applications
 
 \begin_deeper
 \begin_layout Itemize
-Disease diagnosis
+Disease diagnosis 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "shamshirband2014tuberculosis"
@@ -747,7 +747,14 @@ Modelling disease behaviour in different conditions
 \end_layout
 
 \begin_layout Itemize
-Intrusion detection
+Intrusion detection 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dasgupta2005artificial"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
