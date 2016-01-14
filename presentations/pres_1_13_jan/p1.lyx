@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass beamer
@@ -53,13 +53,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -70,15 +70,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_amsmath 2
-\use_esint 0
-\use_mhchem 0
-\use_mathdots 0
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
@@ -106,7 +115,7 @@ Artificial Immune System
 \end_layout
 
 \begin_layout Author
-Karthik.S
+Karthik S 
 \begin_inset ERT
 status collapsed
 
@@ -121,17 +130,7 @@ status collapsed
 
 \end_inset
 
-Chandan Yeshwanth
-\begin_inset Argument
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
+ Chandan Yeshwanth
 \end_layout
 
 \begin_layout Standard
@@ -338,23 +337,6 @@ beamerdefaultoverlayspecification{<+->}
 
 \end_layout
 
-\begin_layout BeginFrame
-Outline
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset toc
-LatexCommand tableofcontents
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout EndFrame
-
-\end_layout
-
 \begin_layout Section
 Clonal Selection Theory
 \end_layout
@@ -363,10 +345,20 @@ Clonal Selection Theory
 Introduction
 \end_layout
 
-\begin_layout BeginFrame
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Introduction
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
 B-lymphocytes: possess receptors, produce antibodies
 \end_layout
@@ -397,18 +389,25 @@ Antibody: neutralizes pathogens; unique to an antigen
 Each B-cell can produce antibodies of a single variety
 \end_layout
 
-\begin_layout EndFrame
-
-\end_layout
-
+\end_deeper
 \begin_layout Subsection
 B-cell Response Mechanism
 \end_layout
 
-\begin_layout BeginFrame
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Clonal Selection
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -439,7 +438,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Clonal Selection Principle
@@ -472,14 +471,25 @@ end{center}
 
 \end_layout
 
-\begin_layout EndFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
-\begin_layout BeginFrame
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Affinity Maturation
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -510,7 +520,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Affinity Maturation
@@ -539,14 +549,25 @@ end{center}
 
 \end_layout
 
-\begin_layout EndFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
-\begin_layout BeginFrame
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Response Efficacy
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -577,7 +598,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Antibody Concentration
@@ -606,39 +627,161 @@ end{center}
 
 \end_layout
 
-\begin_layout EndFrame
-
-\end_layout
-
+\end_deeper
 \begin_layout Section
 Artificial Immune System
 \end_layout
 
-\begin_layout BeginFrame
-Modeling Problems
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Shape-space Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Model for interaction between Ag and Ab
+\begin_inset CommandInset citation
+LatexCommand cite
+key "de2002learning"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
+Ag's and Ab's are points in 
+\begin_inset Formula $S^{l}\subseteq\mathbb{R}^{l}$
+\end_inset
+
 
 \end_layout
 
-\begin_layout EndFrame
+\begin_layout Itemize
+Distance measure used to calculate the degree of interaction
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+CLONALG - Immune Aspects
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Maintenance of a specific memory set
+\end_layout
+
+\begin_layout Enumerate
+Selective cloning of the most stimulated Ab’s
+\end_layout
+
+\begin_layout Enumerate
+Death of nonstimulated Ab’s
+\end_layout
+
+\begin_layout Enumerate
+Affinity maturation 
+\end_layout
+
+\begin_layout Enumerate
+Reselection of the clones proportionally to their antigenic affinity
+\end_layout
+
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
 \begin_layout Section
-Artificial Immune System
+Possible Applications
 \end_layout
 
-\begin_layout BeginFrame
-Potential Problems
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Possible Applications
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Disease diagnosis 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "shamshirband2014tuberculosis"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Disease detection
+Modelling disease behaviour in different conditions
 \end_layout
 
-\begin_layout EndFrame
+\begin_layout Itemize
+Intrusion detection 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dasgupta2005artificial"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nocite{floreano2008bio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "p1"
+options "plain"
+
+\end_inset
+
 
 \end_layout
 
