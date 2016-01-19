@@ -102,7 +102,7 @@
 \begin_body
 
 \begin_layout Title
-Using Cross Reactivity in an AIS For Prediction of Similar Diseases
+Using Cross Reactivity in an AIS For Prediction of Outcome of Similar Diseases
 \end_layout
 
 \begin_layout Author
@@ -412,6 +412,43 @@ Cross Reactivity
 
 \end_layout
 
+\begin_layout BeginFrame
+Related Works
+\end_layout
+
+\begin_layout Itemize
+Woldemariam, Kumlachew M., and Gary G.
+ Yen.
+ "Vaccine-enhanced artificial immune system for multimodal function optimization
+\begin_inset Quotes erd
+\end_inset
+
+.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "woldemariam2010vaccine"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Shamshirband, Shahaboddin, et al.
+ "Tuberculosis disease diagnosis using artificial immune recognition system."
+\begin_inset CommandInset citation
+LatexCommand cite
+key "shamshirband2014tuberculosis"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
 \begin_layout Subsection
 Similar Diseases
 \end_layout
@@ -516,12 +553,46 @@ Compare accuracy of trained AIS with that of untrained AIS
 
 \begin_layout Itemize
 Compare final 
-\begin_inset Formula $Ab$
+\begin_inset Formula $Ab-Ag$
 \end_inset
 
- affinities
+ affinities/efficacies
 \end_layout
 
+\begin_layout Itemize
+Compare amount of additional training required to achieve a 'good' affinity
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Section
+Alternatives
+\end_layout
+
+\begin_layout BeginFrame
+Alternative Topic 
+\end_layout
+
+\begin_layout Itemize
+Simulation of vertebrate immune system using AIS
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Model only B-cell reaction
+\end_layout
+
+\begin_layout Itemize
+Model reaction under different conditions (age, medication)
+\end_layout
+
+\begin_layout Itemize
+Predict outcome of treatment
+\end_layout
+
+\end_deeper
 \begin_layout EndFrame
 
 \end_layout
