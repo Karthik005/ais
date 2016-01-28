@@ -1,5 +1,5 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass beamer
@@ -53,13 +53,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
-\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -70,24 +70,15 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_package amsmath 2
-\use_package amssymb 2
-\use_package cancel 1
-\use_package esint 0
-\use_package mathdots 0
-\use_package mathtools 1
-\use_package mhchem 0
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_amsmath 2
+\use_esint 0
+\use_mhchem 0
+\use_mathdots 0
 \cite_engine basic
-\cite_engine_type default
-\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
@@ -349,20 +340,10 @@ beamerdefaultoverlayspecification{<+->}
 Datasets
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 Identify Datasets
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
 \begin_layout Itemize
 Find datasets for similar diseases
 \end_layout
@@ -388,8 +369,7 @@ Datasets should have the same features
 Most datasets have statistics and not patient data
 \end_layout
 
-\end_deeper
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
@@ -397,20 +377,10 @@ Most datasets have statistics and not patient data
 ARTIS
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 Implementation 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
 \begin_layout Itemize
 Using existing architectures - ARTIS 
 \begin_inset CommandInset citation
@@ -422,22 +392,12 @@ key "hofmeyr2000architecture"
 
 \end_layout
 
-\end_deeper
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 ARTIS 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -455,32 +415,20 @@ either self or non-self
 
 \end_deeper
 \begin_layout Itemize
-Distributed environment is a graph 
+Receptors and Epitopes are fixed-length strings in HIS
 \end_layout
 
 \begin_layout Itemize
-Detectors (antibodies) at the vertices and move along the edges
+Detectors (antibodies) present at the vertices of a graph and move along
+ the edges
 \end_layout
 
-\begin_layout Itemize
-Receptors and Epitopes are fixed-length strings
-\end_layout
-
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 ARTIS 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -505,24 +453,15 @@ Match count reduces by
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 Detector Lifecycle
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -531,7 +470,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/detector-lifecycle.png
-	scale 50
+	scale 35
 
 \end_inset
 
@@ -539,7 +478,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Detector Lifecycle 
@@ -563,6 +502,10 @@ key "hofmeyr2000architecture"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout EndFrame
 
 \end_layout
 

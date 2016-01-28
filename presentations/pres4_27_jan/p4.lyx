@@ -1,5 +1,5 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass beamer
@@ -54,13 +54,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
-\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -71,24 +71,15 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_package amsmath 2
-\use_package amssymb 2
-\use_package cancel 1
-\use_package esint 0
-\use_package mathdots 0
-\use_package mathtools 1
-\use_package mhchem 0
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_amsmath 2
+\use_esint 0
+\use_mhchem 0
+\use_mathdots 0
 \cite_engine basic
-\cite_engine_type default
-\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
@@ -346,17 +337,8 @@ beamerdefaultoverlayspecification{<+->}
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 Change of Topic
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -367,21 +349,12 @@ Could not find data with similar attributes for similar diseases
 Previous papers only use single disease data or dissimilar data
 \end_layout
 
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 New Problem Statement
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -417,21 +390,12 @@ Detectors are not mobile
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 Proposal
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -446,7 +410,7 @@ Connections to individual nodes not known by others
 However, this information is secret-shared for training 
 \end_layout
 
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
