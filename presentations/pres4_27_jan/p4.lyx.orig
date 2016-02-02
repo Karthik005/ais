@@ -153,36 +153,18 @@ Could not find data with similar attributes for similar diseases
 
 \begin_layout Itemize
 Previous papers only use single disease data or dissimilar data
-\end_inset
-
-
 \end_layout
 
 \begin_layout Separator
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
 
-\begin_layout Plain Layout
-If you wish to uncover everything in a step-wise fashion, uncomment the
- following command:
 \end_layout
 
 \begin_layout Frame
 \begin_inset Argument 4
 status open
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
 
 \begin_layout Plain Layout
 New Problem Statement
-
-%
-\backslash
-beamerdefaultoverlayspecification{<+->}
 \end_layout
 
 \end_inset
@@ -190,8 +172,9 @@ beamerdefaultoverlayspecification{<+->}
 
 \end_layout
 
+<<<<<<< HEAD
 \begin_layout BeginFrame
-Change of Topic
+Problems with previous topic
 \end_layout
 
 \begin_layout Itemize
@@ -214,6 +197,8 @@ Could not find a significant gap
 New Problem Statement
 \end_layout
 
+=======
+>>>>>>> 49ef7fa77bf7091be5aad379f8ef1ade1f425719
 \begin_layout Itemize
 Recall: LISYS 
 \begin_inset CommandInset citation
@@ -276,7 +261,7 @@ Connections to individual nodes not known by others
 However, this information is secret-shared for training 
 \end_layout
 
-\begin_layout EndFrame
+\begin_layout Separator
 
 \end_layout
 
@@ -292,7 +277,7 @@ Mathematical formulation/pseudocode of LISYS
 Selection of parameters for the AIS (eg: Affinity function)
 \end_layout
 
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
