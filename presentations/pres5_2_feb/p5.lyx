@@ -399,6 +399,14 @@ If detectors are activated (exceed threshold), commit to memory
 \end_layout
 
 \begin_layout BeginFrame
+Algorithm
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
 Datasets
 \end_layout
 
@@ -411,7 +419,7 @@ Next Steps
 \end_layout
 
 \begin_layout Itemize
-
+Come up with shared structure for detectors, antigens
 \end_layout
 
 \begin_layout Itemize
