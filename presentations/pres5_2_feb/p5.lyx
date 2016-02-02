@@ -338,19 +338,30 @@ beamerdefaultoverlayspecification{<+->}
 \end_layout
 
 \begin_layout BeginFrame
-Problems with previous topic
+Algorithm
 \end_layout
 
 \begin_layout Itemize
-Could not find data with similar attributes for similar diseases
+Variation of ARTIS
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hofmeyr2000architecture"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Previous papers only use single disease data or dissimilar data
+Graph consists of single node
 \end_layout
 
 \begin_layout Itemize
-Could not find a significant gap
+Detectors and antigens consist of binary strings
+\end_layout
+
+\begin_layout Itemize
+Antigen: Encoding of incoming connection
 \end_layout
 
 \begin_layout EndFrame
@@ -358,39 +369,28 @@ Could not find a significant gap
 \end_layout
 
 \begin_layout BeginFrame
-New Problem Statement
+Algorithm
 \end_layout
 
 \begin_layout Itemize
-Recall: LISYS 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "hofmeyr2000architecture"
-
-\end_inset
-
- is a popular network security AIS for LAN 
-\end_layout
-
-\begin_layout Itemize
-Each node has its own set of detectors
-\end_layout
-
-\begin_layout Itemize
-Gaps -
+Broadly consits of the following steps:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Assumes a broadcast network to broadcast SYN packets
+Generate random set of detectors
 \end_layout
 
 \begin_layout Itemize
-Privacy of connections to nodes not maintained
+Tolerization: Replace those detectors that are affine to self strings
 \end_layout
 
 \begin_layout Itemize
-Detectors are not mobile
+Collectively classify incoming connections to network using the detectors
+\end_layout
+
+\begin_layout Itemize
+If detectors are activated (exceed threshold), commit to memory
 \end_layout
 
 \end_deeper
@@ -399,19 +399,7 @@ Detectors are not mobile
 \end_layout
 
 \begin_layout BeginFrame
-Proposal
-\end_layout
-
-\begin_layout Itemize
-Privacy-preserving shared immune system
-\end_layout
-
-\begin_layout Itemize
-Connections to individual nodes not known by others
-\end_layout
-
-\begin_layout Itemize
-However, this information is secret-shared for training 
+Datasets
 \end_layout
 
 \begin_layout EndFrame
@@ -423,11 +411,11 @@ Next Steps
 \end_layout
 
 \begin_layout Itemize
-Mathematical formulation/pseudocode of LISYS
+
 \end_layout
 
 \begin_layout Itemize
-Selection of parameters for the AIS (eg: Affinity function)
+Finalize dataset(s) to be used
 \end_layout
 
 \begin_layout EndFrame
@@ -437,7 +425,7 @@ Selection of parameters for the AIS (eg: Affinity function)
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "p4"
+bibfiles "p5"
 options "plain"
 
 \end_inset
