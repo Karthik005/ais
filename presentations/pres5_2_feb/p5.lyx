@@ -1,5 +1,5 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass beamer
@@ -54,13 +54,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
-\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -71,24 +71,15 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_package amsmath 2
-\use_package amssymb 2
-\use_package cancel 1
-\use_package esint 0
-\use_package mathdots 0
-\use_package mathtools 1
-\use_package mhchem 0
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_amsmath 2
+\use_esint 0
+\use_mhchem 0
+\use_mathdots 0
 \cite_engine basic
-\cite_engine_type default
-\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
@@ -346,20 +337,10 @@ beamerdefaultoverlayspecification{<+->}
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 Algorithm
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
 \begin_layout Itemize
 Variation of ARTIS
 \begin_inset CommandInset citation
@@ -383,25 +364,14 @@ Detectors and antigens consist of binary strings
 Antigen: Encoding of incoming connection
 \end_layout
 
-\end_deeper
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 Algorithm
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
 \begin_layout Itemize
 Broadly consists of the following steps:
 \end_layout
@@ -424,39 +394,58 @@ If detectors are activated (exceed threshold), commit to memory
 \end_layout
 
 \end_deeper
-\end_deeper
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 Algorithm
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-Datasets
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/algo.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+ARTIS Pseudocode
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Datasets
 \end_layout
 
 \begin_layout Itemize
@@ -481,21 +470,12 @@ Several advantages - no duplicates, no need for sampling
 Approximately 200k attack, 800k normal records in the training set
 \end_layout
 
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 NSL-KDD Records
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -513,21 +493,12 @@ Eg:
 
 \end_layout
 
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 Other Datasets
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -572,24 +543,14 @@ http://www.unb.ca/research/iscx/dataset/index.html
 
 \end_layout
 
-\begin_layout Separator
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginFrame
 Next Steps
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
 \begin_layout Itemize
 Come up with shared structure for detectors, antigens
 \end_layout
@@ -598,7 +559,10 @@ Come up with shared structure for detectors, antigens
 Finalize dataset(s) to be used
 \end_layout
 
-\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
