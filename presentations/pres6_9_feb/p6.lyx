@@ -1,0 +1,265 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{listings}
+\usetheme{Warsaw}
+% or ...
+%\usetheme{Antibes}	% tree outline, neat
+%\usetheme{JuanLesPins}	% like Antibes, with shading
+%\usetheme{Bergen}	% outline on side
+%\usetheme{Luebeck}	% like Warsaw, square sides
+%\usetheme{Berkeley}	% interesting left bar outline
+%\usetheme{Madrid}	% clean, nice.  7/12 page numbers
+%\usetheme{Berlin}	% dots show slide number
+%\usetheme{Malmoe}	% OK, plain, unshaded
+%\usetheme{Boadilla}	% nice, white bg, no top bar
+%\usetheme{Marburg}	% nice, outline on right
+%\usetheme{boxes}	% ???
+%\usetheme{Montpellier}	% tree outline on top, plainish white
+%\usetheme{Copenhagen}	% like Warsaw
+%\usetheme{PaloAlto}	% looks good
+%\usetheme{Darmstadt}	% like Warsaw with circle outline
+%\usetheme{Pittsburgh}
+%\usetheme{default}
+%\usetheme{Rochester}	% like boxy, unshaded warsaw
+%\usetheme{Dresden}	% circle outline on top
+%\usetheme{Singapore}	% purple gradient top
+%\usetheme{Frankfurt}	% like Warsaw with circle outline on top
+%\usetheme{Szeged}
+%\usetheme{Goettingen}	% light purple right bar outline
+%\usetheme{Warsaw}
+%\usetheme{Hannover}	% like Goett with bar on left
+%\usetheme{compatibility}
+%\usetheme{Ilmenau}
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+%\usecolortheme{seahorse}
+%\usecolortheme{rose}
+
+% seems to fix typewriter font in outline header:
+\usepackage{ae,aecompl}
+\usepackage{tikz}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 0
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Privacy-Preserving AIS for Network Security
+\end_layout
+
+\begin_layout Author
+Karthik S 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ Chandan Yeshwanth
+\end_layout
+
+\begin_layout BeginFrame
+Desired System Properties
+\end_layout
+
+\begin_layout Itemize
+Self-behaviour for a node: valid connections that it receives
+\end_layout
+
+\begin_layout Itemize
+Self-behaviour of individual nodes used to develop common set of detectors
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This is done without revealing self-behaviour
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Once tolerized, an anomalous connection can be detected without revealing
+ it
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout BeginFrame
+System Model
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n$
+\end_inset
+
+ nodes/parties in a fully connected network
+\end_layout
+
+\begin_layout Itemize
+At least 
+\begin_inset Formula $t$
+\end_inset
+
+ nodes required to reconstruct shared values
+\end_layout
+
+\begin_layout Itemize
+Failure-free and non-malicious nodes (no deviation from protocol)
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout BeginFrame
+Approach
+\end_layout
+
+\begin_layout Itemize
+Generate random secret-shared set of detectors
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Each node contributes its share of randomness
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Tolerize generated set by using secret-shared self-antigens from each node
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Use privacy-preserving affinity function to check for matches without revealing
+ additional information
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Use trained, secret-shared detectors to identify secret-shared anomalous
+ connections
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Feedback Received
+\end_layout
+
+\begin_layout Itemize
+KDD dataset: reliable, widely used in academic studies
+\end_layout
+
+\begin_layout Itemize
+Implementation: make sure possible
+\end_layout
+
+\begin_layout Itemize
+Computational efficiency: not very important as this is a theoretical framework
+\end_layout
+
+\begin_layout Itemize
+Ensure properties of both systems, i.e, AIS and privacy-preserving computation
+ mechanism, are conserved
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "p5,p6"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

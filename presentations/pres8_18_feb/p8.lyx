@@ -1,5 +1,5 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass beamer
@@ -54,13 +54,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
-\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -71,24 +71,15 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_package amsmath 2
-\use_package amssymb 2
-\use_package cancel 1
-\use_package esint 0
-\use_package mathdots 0
-\use_package mathtools 1
-\use_package mhchem 0
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_amsmath 2
+\use_esint 0
+\use_mhchem 0
+\use_mathdots 0
 \cite_engine basic
-\cite_engine_type default
-\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
@@ -346,161 +337,127 @@ beamerdefaultoverlayspecification{<+->}
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Encoding Connections
+\begin_layout BeginFrame
+Notation
 \end_layout
 
+\begin_layout Itemize
+Each detector as well as incoming connection has an 
+\begin_inset Formula $l$
+\end_inset
+
+-bit binary representation
+\end_layout
+
+\begin_layout Itemize
+Each detector denoted as a vector of its bit representation:
+\begin_inset Formula $\vec{d_{i}}=[d_{i1},d_{i2},\ldots,d_{il}]$
 \end_inset
 
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
-Connections need to be encoded as binary strings
+Secret sharing scheme : additive and bitwise
 \end_layout
 
 \begin_layout Itemize
-Encoding in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "hofmeyr2000architecture"
-
+Bitwise secret sharing of 
+\begin_inset Formula $\vec{d}_{i}$
 \end_inset
 
- - 
-\begin_inset Formula $49$
-\end_inset
-
- bit string for each TCP SYN packet
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Source IP, Destination IP, Port
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Encoding in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "harmer2002artificial"
-
-\end_inset
-
- - 
-\begin_inset Formula $320$
-\end_inset
-
- bit string for TCP, UDP, ICMP packets
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-All header fields and data
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Encoding for NSL-KDD Dataset
-\end_layout
-
+ denoted by 
+\begin_inset Formula $\ensuremath{[\![\vec{d_{i}}]\!]=[[\![d_{i1}]\!],[\![d_{i2}]\!],\ldots,[\![d_{il}]\!]]}$
 \end_inset
 
 
 \end_layout
 
-\begin_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Detector construction
+\end_layout
+
 \begin_layout Itemize
-NSL-KDD dataset has 
-\begin_inset Formula $42$
+Let 
+\begin_inset Formula $q,l,n$
 \end_inset
 
- real, binary and categorical attributes
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Binary - retained as-is
+ be the initial number of detectors, encoding bit length and number of parties
+ respectively
 \end_layout
 
 \begin_layout Itemize
-Real - find maximum bits required and convert to binary
+Let 
+\begin_inset Formula $u=n/q$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Categorical - range of values given in header
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ generates a random set of detectors 
+\begin_inset Formula $D_{i}=\{\vec{d_{i1}},\vec{d}_{i2,},\ldots\vec{,d{}_{iu}}\}$
+\end_inset
+
+
 \end_layout
 
-\end_deeper
-\end_deeper
-\begin_layout Separator
+\begin_layout Itemize
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ then bitwise secret shares 
+\begin_inset Formula $d\in D$
+\end_inset
+
+ among other parties
+\end_layout
+
+\begin_layout Itemize
+At the end of the random detector construction phase each party has shares
+ of 
+\begin_inset Formula $q$
+\end_inset
+
+ bit-wise additive secret shared detectors, i.e., 
+\begin_inset Formula $\{[\![\vec{d_{1}}]\!],[\![\vec{d_{2}}]\!],\ldots,[\![\vec{d_{q}}]\!]\}$
+\end_inset
+
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
+\begin_layout EndFrame
 
-\begin_layout Plain Layout
+\end_layout
+
+\begin_layout BeginFrame
 Next Steps
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
 \begin_layout Itemize
-Read 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "tavallaee2009detailed"
-
-\end_inset
-
- and 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "kayacik2005selecting"
-
-\end_inset
-
- on feature selection and analysis of the KDD dataset
+Define the actual secret-sharing scheme to be used
 \end_layout
 
 \begin_layout Itemize
-Choose a secret sharing algorithm such as Shamir's Secret Sharing 
+Describe the black-box affinity function
 \end_layout
 
 \begin_layout Itemize
-Choose a multi-party string comparison algorithm.
- Eg - 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ravikumar2004secure,rane2010privacy"
+Tolerize random set of detectors on shared self-behaviour using affinity
+ function
+\end_layout
 
-\end_inset
-
+\begin_layout EndFrame
 
 \end_layout
 
-\end_deeper
 \begin_layout Separator
 
 \end_layout
