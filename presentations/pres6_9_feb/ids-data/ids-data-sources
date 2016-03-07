@@ -1,0 +1,33 @@
+list of datasets on quora - raw logs + labelled
+https://www.quora.com/Where-can-I-get-the-latest-dataset-for-a-network-intrusion-detection-system
+
+NSL KDD datasets (labelled activity) (widely used)
+http://www.shubhamsaini.com/datasets.html
+https://web.archive.org/web/20150205070216/http://nsl.cs.unb.ca/NSL-KDD/
+	official link (information + mail to get data)
+http://www.unb.ca/research/iscx/dataset/iscx-NSL-KDD-dataset.html
+	repo 
+https://github.com/defcom17/NSL_KDD
+
+example - 
+0,tcp,ftp_data,SF,491,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0.00,0.00,0.00,0.00,1.00,0.00,0.00,150,25,0.17,0.03,0.17,0.00,0.00,0.00,0.05,0.00,normal,20
+0,udp,other,SF,146,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,1,0.00,0.00,0.00,0.00,0.08,0.15,0.00,255,1,0.00,0.60,0.88,0.00,0.00,0.00,0.00,0.00,normal,15
+0,tcp,private,S0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,123,6,1.00,1.00,0.00,0.00,0.05,0.07,0.00,255,26,0.10,0.05,0.00,0.00,1.00,1.00,0.00,0.00,neptune,19
+
+More from Univ Brunswick
+http://www.unb.ca/research/iscx/dataset/iscx-IDS-dataset.html
+
+CSIC 2010 HTTP Dataset in CSV Format (for Weka Analysis)
+http://users.aber.ac.uk/pds7/csic_dataset/csic2010http.html
+original dataset of HTTP/1.1 packets, including web application penetration testing packets. It has 2 labels (normal and anomalous).
+
+DARPA datasets 
+http://www.ll.mit.edu/ideval/data/
+
+Query dataset ?
+http://www2.lirmm.fr/pkdd2007-challenge/#dataset
+
+
+
+
+
