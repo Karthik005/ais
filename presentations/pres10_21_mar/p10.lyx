@@ -343,23 +343,18 @@ Recap
 \end_layout
 
 \begin_layout Itemize
-3 step protocol:
-\end_layout
+Defined secret sharing scheme to be used (Bitwise Additive secret sharing
+ over 
+\begin_inset Formula $Z_{2}$
+\end_inset
 
-\begin_deeper
-\begin_layout Itemize
-Generation of random secret-shared detector set
-\end_layout
-
-\begin_layout Itemize
-Tolerization of generated detector set on safe connections
+)
 \end_layout
 
 \begin_layout Itemize
-Usage of trained detector set on incoming connections
+Explored privacy-preserving random detector set generation algorithm
 \end_layout
 
-\end_deeper
 \begin_layout EndFrame
 
 \end_layout
