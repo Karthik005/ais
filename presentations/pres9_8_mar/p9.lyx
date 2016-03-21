@@ -1,0 +1,705 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{listings}
+\usetheme{Warsaw}
+% or ...
+%\usetheme{Antibes}	% tree outline, neat
+%\usetheme{JuanLesPins}	% like Antibes, with shading
+%\usetheme{Bergen}	% outline on side
+%\usetheme{Luebeck}	% like Warsaw, square sides
+%\usetheme{Berkeley}	% interesting left bar outline
+%\usetheme{Madrid}	% clean, nice.  7/12 page numbers
+%\usetheme{Berlin}	% dots show slide number
+%\usetheme{Malmoe}	% OK, plain, unshaded
+%\usetheme{Boadilla}	% nice, white bg, no top bar
+%\usetheme{Marburg}	% nice, outline on right
+%\usetheme{boxes}	% ???
+%\usetheme{Montpellier}	% tree outline on top, plainish white
+%\usetheme{Copenhagen}	% like Warsaw
+%\usetheme{PaloAlto}	% looks good
+%\usetheme{Darmstadt}	% like Warsaw with circle outline
+%\usetheme{Pittsburgh}
+%\usetheme{default}
+%\usetheme{Rochester}	% like boxy, unshaded warsaw
+%\usetheme{Dresden}	% circle outline on top
+%\usetheme{Singapore}	% purple gradient top
+%\usetheme{Frankfurt}	% like Warsaw with circle outline on top
+%\usetheme{Szeged}
+%\usetheme{Goettingen}	% light purple right bar outline
+%\usetheme{Warsaw}
+%\usetheme{Hannover}	% like Goett with bar on left
+%\usetheme{compatibility}
+%\usetheme{Ilmenau}
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+%\usecolortheme{seahorse}
+%\usecolortheme{rose}
+
+% seems to fix typewriter font in outline header:
+\usepackage{ae,aecompl}
+\usepackage{tikz}
+\usepackage{algorithmicx}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 0
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+	Privacy-Preserving AIS for Network Security
+\end_layout
+
+\begin_layout Author
+Karthik S 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ Chandan Yeshwanth
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+place handout in layout->document->layout->options to suppress overlays
+ for printing
+\end_layout
+
+\begin_layout Plain Layout
+now, how to eliminate color printing etc.
+ for handout printing? need to do pstricks
+\end_layout
+
+\begin_layout Plain Layout
+why aren't my Lyx Notes or style NoteItems appearing in handout?
+\end_layout
+
+\begin_layout Plain Layout
+place draft in there to (somewhat) reduce amount of stuff printed, like
+ top and bottom border
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+If you have a file called "institution-logo-filename.xxx", where xxx is a
+ graphic format that can be processed by latex or pdflatex, resp., then you
+ can add a logo by uncommenting the following:
+\end_layout
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filenameO}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% RPD:  can't get this to work on any template.
+  not present in Warsaw any way, it seems
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% hmm, problem seems to be that it isn't copied to the tmp dir, probably
+ becuase it doesn't have the
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% filename extension (which is tacked on by pgf it seems)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The following causes the table of contents to be shown at the beginning
+ of every subsection.
+ Delete this, if you do not want it.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+AtBeginSubsection[]{
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%  }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+If you wish to uncover everything in a step-wise fashion, uncomment the
+ following command:
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Recap
+\end_layout
+
+\begin_layout Itemize
+3 step protocol:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Generation of random secret-shared detector set
+\end_layout
+
+\begin_layout Itemize
+Tolerization of generated detector set on safe connections
+\end_layout
+
+\begin_layout Itemize
+Usage of trained detector set on incoming connections
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bitwise additive secret sharing
+\end_layout
+
+\begin_layout Itemize
+Assume an 
+\begin_inset Formula $n$
+\end_inset
+
+ party fully connected system
+\end_layout
+
+\begin_layout Itemize
+Assume each bitstring 
+\begin_inset Formula $x$
+\end_inset
+
+ is an xor of 
+\begin_inset Formula $n$
+\end_inset
+
+ random shares i.e, 
+\begin_inset Formula $x=x_{1}\oplus x_{2}\oplus...\oplus x_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Each 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is an 
+\begin_inset Formula $l$
+\end_inset
+
+ bit string
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Generalized bitwise additive share generation
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mortensen2007secret"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Initially generate 
+\begin_inset Formula $n-1$
+\end_inset
+
+ random bit strings 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The last share is determined by : 
+\begin_inset Formula $x_{n}=x_{1}\oplus x_{2}\oplus\ldots\oplus x_{n-1}\oplus x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The shares 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+ are sent to the 
+\begin_inset Formula $n$
+\end_inset
+
+ parties
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Detector construction
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $q,l,n$
+\end_inset
+
+ be the initial number of detectors, encoding bit length and number of parties
+ respectively
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ generates a random set of detector shares (indexed 
+\begin_inset Formula $l$
+\end_inset
+
+ bit random strings) 
+\begin_inset Formula $D_{i}=\{d_{ab},x\in\{0,1\}^{l}\wedge(1\leq a\leq q)\wedge(1\leq b\leq n)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The actual detector is given by 
+\begin_inset Formula $d_{a}=\oplus d_{ab},1\leq b\leq n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+At the end of the random detector construction phase each party has shares
+ of 
+\begin_inset Formula $q$
+\end_inset
+
+ bit-wise additive secret shared detectors, i.e., 
+\begin_inset Formula $\{[\![d_{1}]\!],[\![d_{2}]\!],\ldots,[\![d_{q}]\!]\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Note: No communication among parties during construction
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Proof of randomness
+\end_layout
+
+\begin_layout Itemize
+The detector set generated above is random assuming each party generates
+ a random share
+\end_layout
+
+\begin_layout Itemize
+Proof
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Assume a trusted third party T that generates a random detector 
+\begin_inset Formula $d$
+\end_inset
+
+ and generates 
+\begin_inset Formula $n$
+\end_inset
+
+ shares
+\end_layout
+
+\begin_layout Itemize
+From the generation protocol, T generates random 
+\begin_inset Formula $d_{1},d_{2},\ldots,d_{n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Then 
+\begin_inset Formula $n^{th}$
+\end_inset
+
+share, 
+\begin_inset Formula $d_{n}=d_{1}\oplus d_{2}\oplus\ldots\oplus d_{n-1}\oplus d$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+This implies 
+\begin_inset Formula $d_{n}$
+\end_inset
+
+ is also random (since it is an xor of random bit strings)
+\end_layout
+
+\begin_layout Itemize
+This is equivalent to generating a random 
+\begin_inset Formula $d_{n}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Affinity function
+\end_layout
+
+\begin_layout Itemize
+Affinity function modelled as a black box
+\end_layout
+
+\begin_layout Itemize
+Given a secret shared detector 
+\begin_inset Formula $[\![d]\!]$
+\end_inset
+
+ and a secret shared connection 
+\begin_inset Formula $[\![c]\!]$
+\end_inset
+
+, the affinity function black box works as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A_{f}([\![d]\!],[\![c]\!])=[\![z]\!]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $z$
+\end_inset
+
+ is the affinity metric between the detector and the connection.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Tolerization
+\end_layout
+
+\begin_layout Itemize
+The tolerization protocol is as follows.
+\end_layout
+
+\begin_layout Itemize
+For a given party 
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ and threshold affinity 
+\begin_inset Formula $th$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+On receiving a connection 
+\begin_inset Formula $c$
+\end_inset
+
+, generate shares 
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
+\end_inset
+
+ using BASS
+\end_layout
+
+\begin_layout Itemize
+For each detector 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Calculate 
+\begin_inset Formula $[\![z]\!]=A_{f}([\![d_{i}]\!],[\![c]\!])$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $[\![z]\!]\stackrel{?}{>}th$
+\end_inset
+
+, discard 
+\begin_inset Formula $[\![d_{i}]\!]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/home/karthik/Academic_Labs/sem8_labs/ai_immunity/presentations/common"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
