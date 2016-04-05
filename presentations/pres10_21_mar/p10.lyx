@@ -352,7 +352,7 @@ Defined secret sharing scheme to be used (Bitwise Additive secret sharing
 \end_layout
 
 \begin_layout Itemize
-Explored privacy-preserving random detector set generation algorithm
+Explored privacy-preserving random detector set generation
 \end_layout
 
 \begin_layout EndFrame
@@ -360,210 +360,143 @@ Explored privacy-preserving random detector set generation algorithm
 \end_layout
 
 \begin_layout BeginFrame
-Bitwise additive secret sharing
+LISYS Overview
 \end_layout
 
-\begin_layout Itemize
-Assume an 
-\begin_inset Formula $n$
-\end_inset
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
- party fully connected system
-\end_layout
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/detector-lifecycle.png
+	scale 40
 
-\begin_layout Itemize
-Assume each bitstring 
-\begin_inset Formula $x$
-\end_inset
-
- is an xor of 
-\begin_inset Formula $n$
-\end_inset
-
- random shares i.e, 
-\begin_inset Formula $x=x_{1}\oplus x_{2}\oplus...\oplus x_{n}$
 \end_inset
 
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Each 
-\begin_inset Formula $x_{i}$
-\end_inset
+\begin_layout Plain Layout
+\begin_inset Caption
 
- is an 
-\begin_inset Formula $l$
-\end_inset
-
- bit string
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Generalized bitwise additive share generation
+\begin_layout Plain Layout
+Detector lifecycle
 \begin_inset CommandInset citation
 LatexCommand cite
-key "mortensen2007secret"
+key "hofmeyr2000architecture"
 
 \end_inset
 
-:
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Outline
+\end_layout
+
+\begin_layout Itemize
+Affinity function : privacy-preserving 
+\begin_inset Formula $r$
+\end_inset
+
+ contiguous bits (R-CONT)
+\end_layout
+
+\begin_layout Itemize
+Tolerization/Maturation of detectors using R-CONT
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Notation
+\end_layout
+
+\begin_layout Itemize
+Detector indexed by i denoted by 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Initially generate 
-\begin_inset Formula $n-1$
-\end_inset
-
- random bit strings 
-\begin_inset Formula $x_{1},x_{2},\ldots,x_{n-1}$
+Bit representation of 
+\begin_inset Formula $d_{i}\rightarrow d_{i1}d_{i2}\ldots d_{il}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-The last share is determined by : 
-\begin_inset Formula $x_{n}=x_{1}\oplus x_{2}\oplus\ldots\oplus x_{n-1}\oplus x$
+Party 
+\begin_inset Formula $k$
+\end_inset
+
+'s share of 
+\begin_inset Formula $d_{ij}\rightarrow[d_{ij}]^{k}$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-The shares 
-\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
-\end_inset
-
- are sent to the 
-\begin_inset Formula $n$
-\end_inset
-
- parties
 \end_layout
 
 \end_deeper
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout BeginFrame
-Detector construction
-\end_layout
-
 \begin_layout Itemize
-Let 
-\begin_inset Formula $q,l,n$
-\end_inset
-
- be the initial number of detectors, encoding bit length and number of parties
- respectively
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $P_{i}$
-\end_inset
-
- generates a random set of detector shares (indexed 
-\begin_inset Formula $l$
-\end_inset
-
- bit random strings) 
-\begin_inset Formula $D_{i}=\{d_{ab},x\in\{0,1\}^{l}\wedge(1\leq a\leq q)\wedge(1\leq b\leq n)\}$
+Connection 
+\begin_inset Formula $c$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-The actual detector is given by 
-\begin_inset Formula $d_{a}=\oplus d_{ab},1\leq b\leq n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-At the end of the random detector construction phase each party has shares
- of 
-\begin_inset Formula $q$
-\end_inset
-
- bit-wise additive secret shared detectors, i.e., 
-\begin_inset Formula $\{[\![d_{1}]\!],[\![d_{2}]\!],\ldots,[\![d_{q}]\!]\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Note: No communication among parties during construction
-\end_layout
-
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout BeginFrame
-Proof of randomness
-\end_layout
-
-\begin_layout Itemize
-The detector set generated above is random assuming each party generates
- a random share
-\end_layout
-
-\begin_layout Itemize
-Proof
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Assume a trusted third party T that generates a random detector 
-\begin_inset Formula $d$
+Bit representation 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+of 
+\begin_inset Formula $c\rightarrow c_{1}c_{2}\ldots c_{l}$
 \end_inset
 
- and generates 
-\begin_inset Formula $n$
-\end_inset
 
- shares
 \end_layout
 
 \begin_layout Itemize
-From the generation protocol, T generates random 
-\begin_inset Formula $d_{1},d_{2},\ldots,d_{n-1}$
+Party 
+\begin_inset Formula $k$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Itemize
-Then 
-\begin_inset Formula $n^{th}$
-\end_inset
-
-share, 
-\begin_inset Formula $d_{n}=d_{1}\oplus d_{2}\oplus\ldots\oplus d_{n-1}\oplus d$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-This implies 
-\begin_inset Formula $d_{n}$
-\end_inset
-
- is also random (since it is an xor of random bit strings)
-\end_layout
-
-\begin_layout Itemize
-This is equivalent to generating a random 
-\begin_inset Formula $d_{n}$
+'s share of 
+\begin_inset Formula $c_{j}\rightarrow[c_{j}]^{k}$
 \end_inset
 
 
@@ -575,42 +508,188 @@ This is equivalent to generating a random
 \end_layout
 
 \begin_layout BeginFrame
-Affinity function
-\end_layout
-
-\begin_layout Itemize
-Affinity function modelled as a black box
+Affinity Function
 \end_layout
 
 \begin_layout Itemize
 Given a secret shared detector 
-\begin_inset Formula $[\![d]\!]$
+\begin_inset Formula $[d]$
 \end_inset
 
  and a secret shared connection 
-\begin_inset Formula $[\![c]\!]$
+\begin_inset Formula $[c]$
 \end_inset
 
-, the affinity function black box works as follows:
+, the affinity function works as follows:
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \[
-A_{f}([\![d]\!],[\![c]\!])=[\![z]\!]
+A_{f}([c],[d])=[z]
 \]
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 where 
 \begin_inset Formula $z$
 \end_inset
 
- is the affinity metric between the detector and the connection.
+ is the affinity value between 
+\begin_inset Formula $d,c$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Affinity function must also be privacy preserving.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+r-Contiguous Bits
+\end_layout
+
+\begin_layout Itemize
+Two bit strings 
+\begin_inset Formula $d,c$
+\end_inset
+
+ (both of equal length) match if a and c have atleast r contiguous bits
+ in common (in the same positions)
+\end_layout
+
+\begin_layout Itemize
+Example:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/r_cont.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Matching under the contiguous bit match rule
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hofmeyr2000architecture"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+PP Invert Bit
+\end_layout
+
+\begin_layout Itemize
+For a party 
+\begin_inset Formula $P_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/bit_invert.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+INVERT-BIT
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+PP r-Contiguous Bits
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/pp_r_cont.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+R-CONT 
+\end_layout
+
+\begin_layout Standard
+AND (product) of shares using multiplication protocol described in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cramer2000general"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 7cm
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame
@@ -622,65 +701,51 @@ Tolerization
 \end_layout
 
 \begin_layout Itemize
-The tolerization protocol is as follows.
+Detectors which match with safe connections must be removed
 \end_layout
 
 \begin_layout Itemize
-For a given party 
-\begin_inset Formula $P_{i}$
-\end_inset
-
- and threshold affinity 
-\begin_inset Formula $th$
-\end_inset
-
-:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-On receiving a connection 
-\begin_inset Formula $c$
-\end_inset
-
-, generate shares 
-\begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
-\end_inset
-
- using BASS
+In PP version, parties remove their share of the matching detector
 \end_layout
 
 \begin_layout Itemize
-For each detector 
-\begin_inset Formula $d_{i}$
+Match determined through R-CONT
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Tolerization : Algorithm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/pp_tolerize.png
+	scale 40
+
 \end_inset
 
 
 \end_layout
 
-\begin_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Next Steps
+\end_layout
+
 \begin_layout Itemize
-Calculate 
-\begin_inset Formula $[\![z]\!]=A_{f}([\![d_{i}]\!],[\![c]\!])$
-\end_inset
-
-
+Intrusion detection using trained detector set
 \end_layout
 
 \begin_layout Itemize
-If 
-\begin_inset Formula $[\![z]\!]\stackrel{?}{>}th$
-\end_inset
-
-, discard 
-\begin_inset Formula $[\![d_{i}]\!]$
-\end_inset
-
-
+Correctness, security and performance analysis
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout EndFrame
 
 \end_layout
