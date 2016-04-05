@@ -1,0 +1,87 @@
+% @Author: Karthik
+% @Date:   2016-03-22 08:39:31
+% @Last Modified by:   Karthik
+% @Last Modified time: 2016-03-22 10:28:08
+
+\documentclass[12pt]{article}
+
+\usepackage{enumerate}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+% \usepackage[noend]{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{pstricks}    %for embedding pspicture.
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{algpseudocode}
+
+
+%-------------list of macros for this scribe-----------------
+ \newcommand{\Sen}{\ensuremath{\bf S}}
+ \def\NoNumber#1{{\def\alglinenumber##1{}\State #1}\addtocounter{ALG@line}{-1}}
+ \newcommand{\n}{\ensuremath{\mathcal n}}
+ \newcommand{\Con}{\ensuremath{\mid\mid}}
+ \newcommand{\Com}{\newline \Comment}
+  \newcommand{\Rec}{\ensuremath{\bf R}}
+  \newcommand{\Adv}{\ensuremath{\mathcal A}}
+    \newcommand{\Gen}{\ensuremath{\mathsf Gen}}
+       \newcommand{\Enc}{\ensuremath{\mathsf Enc}}
+       \newcommand{\Dec}{\ensuremath{\mathsf Dec}}
+           \newcommand{\Key}{\ensuremath{\mathsf k}}
+  \newcommand{\Message}{\ensuremath{\mathsf m}}
+    \newcommand{\Cipher}{\ensuremath{\mathsf c}}
+       \newcommand{\MSpace}{\ensuremath{\mathcal M}}
+          \newcommand{\KSpace}{\ensuremath{\mathcal K}}
+          \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+            \newcommand{\CSpace}{\ensuremath{\mathcal C}}
+
+
+
+\begin{document}
+
+\begin{algorithm}[H]
+\caption{INVERT-BIT($[b]^i$)}
+\begin{algorithmic}[1]
+\If {$i = n \wedge n$  is even}
+\State return $[b]^i$
+\Else
+\State return $\neg [b]^i$
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{R-CONT($[c], [d_i]$)}
+\begin{algorithmic}[1]
+\State A $\gets$ Array of size $l-r+1$
+\For {$f = r$ to $l$}
+\State B $\gets$ Array of size $r$
+\For {$w = f-r+1$ to $f$}
+\State $[z_w] = [c_w]-[d_{iw}]$
+\State $B[w-f+r] = $ INVERT-BIT($[z_w]$)
+\EndFor
+\State $[v_f] = \wedge_{h=1}^r B[h]$
+\State $A[f-r+1] = $ INVERT-BIT($[v_f]$)
+\EndFor
+\State return  INVERT-BIT($\wedge_{h=1}^{l-r+1} A[h]$)
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{TOLERIZE($[D]$)}
+\begin{algorithmic}[1]
+\State On receiving connection $c$
+\State \hspace{\algorithmicindent} Share $c$ in bitwise additive fashion 
+\For {$i=1$ to $q$}
+\State $[u_i] = R-CONT([c],[d_i])$
+\State $u_i = $ RECONSTRUCT($[u_i]$)
+\If {$u_i$}
+\State remove $([d_i])$
+\EndIf
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\end{document}
