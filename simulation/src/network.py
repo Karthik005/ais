@@ -2,7 +2,7 @@
 # @Author: Chandan Yeshwanth
 # @Date:   2016-04-18 15:07:22
 # @Last Modified by:   Chandan Yeshwanth
-# @Last Modified time: 2016-04-24 22:43:33
+# @Last Modified time: 2016-04-25 13:18:38
 
 import pandas as pd
 import os
@@ -25,6 +25,9 @@ def read_KDD_data(filename):
 		# this is the training dataset
 		labels = df.iloc[:, -1]
 
+	labels = pd.DataFrame(labels)
+	labels.columns = ["label"]
+
 	return data, labels
 
 def encode_data(df):
@@ -44,14 +47,11 @@ def encode_data(df):
 		# then categorial attribute
 		if (len(unique_vals) == 2 and 0 in unique_vals and 1 in unique_vals) \
 			 or isinstance(unique_vals[0], basestring):
-			print col_name, "CATEGORICAL"
 
 			# convert cols to string and concat
-			column_dfs.append(pd.get_dummies(values).applymap(
-					lambda x: str(int(x))
-				))
-		# if column is int
+			column_dfs.append(pd.get_dummies(values).applymap(int).applymap(str))
 		elif isinstance(unique_vals[0], int):
+			# if column is int
 			# find the length of binary repr. of the max value
 			max_bin_len = len("{0:b}".format(max(unique_vals)))
 			format_str = "{{0:0{maxlen}b}}".format(maxlen=max_bin_len)
@@ -70,7 +70,6 @@ def encode_data(df):
 
 def main():
 	data, labels = read_KDD_data("train.txt")
-
 	enc_data = encode_data(data)
 
 if __name__ == '__main__':
