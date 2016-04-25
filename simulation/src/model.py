@@ -2,10 +2,21 @@
 # @Author: Chandan Yeshwanth
 # @Date:   2016-04-17 20:28:57
 # @Last Modified by:   Chandan Yeshwanth
-# @Last Modified time: 2016-04-25 15:51:59
+# @Last Modified time: 2016-04-25 16:08:08
 
 import pandas as pd
 import random
+
+def r_cont_bits(s1, s2, r):
+	""" r-contiguous bits - s1 and s2 match if they have r contiguous bits in 
+	common """
+	for start in range(0, len(s1) - r + 1):
+		end = start + r 
+
+		if s1[start:end] == s2[start:end]:
+			return True
+
+	return False
 
 class Node(object):
 	"""Represents a single node with detectors"""
@@ -49,7 +60,8 @@ class NonPPModel(object):
 		
 
 def main():
-	pass
+	print r_cont_bits("abc", "abd", 3) 
+	print r_cont_bits("sdnfding", "adnfdeng", 5) 
 
 if __name__ == '__main__':
 	main()
