@@ -2,7 +2,7 @@
 # @Author: Chandan Yeshwanth
 # @Date:   2016-04-18 15:07:22
 # @Last Modified by:   Chandan Yeshwanth
-# @Last Modified time: 2016-04-25 13:18:38
+# @Last Modified time: 2016-04-26 10:23:36
 
 import pandas as pd
 import os
@@ -56,7 +56,7 @@ def encode_data(df):
 			max_bin_len = len("{0:b}".format(max(unique_vals)))
 			format_str = "{{0:0{maxlen}b}}".format(maxlen=max_bin_len)
 			# convert all ints to binary with this length
-			column_dfs.append(values.apply(lambda num:format_str.format(num)))
+			# column_dfs.append(values.apply(lambda num:format_str.format(num)))
 		else:
 			pass
 
@@ -71,6 +71,8 @@ def encode_data(df):
 def main():
 	data, labels = read_KDD_data("train.txt")
 	enc_data = encode_data(data)
+
+	print enc_data
 
 if __name__ == '__main__':
 	main()

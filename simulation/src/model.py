@@ -2,7 +2,7 @@
 # @Author: Chandan Yeshwanth
 # @Date:   2016-04-17 20:28:57
 # @Last Modified by:   Chandan Yeshwanth
-# @Last Modified time: 2016-04-25 16:08:08
+# @Last Modified time: 2016-04-26 10:25:20
 
 import pandas as pd
 import random
@@ -60,8 +60,9 @@ class NonPPModel(object):
 		
 
 def main():
-	print r_cont_bits("abc", "abd", 3) 
-	print r_cont_bits("sdnfding", "adnfdeng", 5) 
+	# print r_cont_bits("abc", "abd", 3) 
+	# print r_cont_bits("sdnfding", "adnfdeng", 5) 
+	print r_cont_bits("b" * 100 + "aa", "b" * 100 + "aa", 2) 
 
 if __name__ == '__main__':
 	main()
